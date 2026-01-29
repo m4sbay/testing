@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pengaturan Akun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-100 flex items-center justify-center p-6">
+    <div class="w-full max-w-3xl bg-white shadow-lg rounded-2xl border border-slate-200 overflow-hidden">
+
+      <!-- Header -->
+      <div class="px-6 py-4 border-b border-slate-200">
+        <h1 class="text-xl font-semibold text-slate-900">Pengaturan Akun</h1>
+        <p class="text-sm text-slate-500">
+          Kelola informasi profil, preferensi notifikasi, dan keamanan akun Anda.
+        </p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="px-6 border-b border-slate-200">
+        <div class="flex gap-4">
+          <button class="py-3 border-b-2 border-indigo-500 text-sm font-medium text-indigo-600">Profil</button>
+          <button class="py-3 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300">Keamanan</button>
+          <button class="py-3 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300">Log Aktivitas</button>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="px-6 py-6 space-y-8">
+
+        <!-- Form Profil -->
+        <div class="space-y-4">
+          <div class="flex flex-col gap-1">
+            <label class="text-sm font-medium text-slate-700 flex items-center gap-1">
+              Nama Lengkap
+              <span class="relative group inline-flex items-center">
+                <span class="w-4 h-4 text-[10px] flex items-center justify-center rounded-full border border-slate-300 text-slate-500 cursor-default">?</span>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-44 rounded-md bg-slate-900 text-xs text-slate-100 px-2 py-1 opacity-0 pointer-events-none group-hover:opacity-100 transition">
+                  Nama ini akan ditampilkan pada profil publik Anda.
+                </div>
+              </span>
+            </label>
+            <input
+              type="text"
+              placeholder="Contoh: Budi Santoso"
+              class="rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label class="text-sm font-medium text-slate-700">Alamat Email</label>
+            <input
+              type="email"
+              placeholder="nama@perusahaan.com"
+              class="rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+        </div>
+
+        <!-- Role -->
+        <div class="space-y-2">
+          <p class="text-sm font-medium text-slate-700">Peran Profesional</p>
+
+          <label class="flex items-center gap-1 text-sm text-slate-700">
+            <input type="radio" name="role" checked class="w-6 h-6 text-indigo-600" />
+            UI Desainer
+          </label>
+
+          <label class="flex items-center gap-1 text-sm text-slate-700">
+            <input type="radio" name="role" class="w-6 h-6 text-indigo-600" />
+            Frontend Developer
+          </label>
+        </div>
+
+        <!-- Email Preference -->
+        <div class="space-y-2">
+          <p class="text-sm font-medium text-slate-700">Preferensi Email</p>
+          <label class="flex items-center gap-3 text-sm text-slate-700">
+            <input type="checkbox" checked class="w-4 h-4 text-indigo-600" />
+            Dapatkan pembaruan mingguan dan pembaruan produk
+          </label>
+        </div>
+
+        <!-- Save Button -->
+        <button class="bg-[#2C04BE] rounded-[10px] text-[14px] w-full py-[10px] text-[#FFFFFF] font-semibold cursor-pointer hover:bg-[#1a037a] transition-all duration-[300ms] ease-in-out">
+          Simpan Perubahan
+        </button>
+
+        <!-- Alert -->
+        <div class="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900 flex gap-2">
+          <div>
+            <p class="font-medium">Verifikasi Email Diperlukan</p>
+            <p class="text-xs text-amber-800">
+              Kami telah mengirimkan tautan konfirmasi ke email Anda. Segera verifikasi untuk mengamankan akun.
+            </p>
+          </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="flex items-center">
+          <div class="bg-[#E5E7EB] rounded-[100px] w-full h-[12px] overflow-hidden">
+            <div class="bg-indigo-600 h-full rounded-[100px] transition-all duration-300" style="width: 70%"></div>
+          </div>
+          <span class="text-sm ml-3 text-[#171717]">70%</span>
+        </div>
+
+        <!-- Automation -->
+        <section class="rounded-xl border border-slate-200 bg-slate-50 p-6 shadow-sm w-full">
+          <h2 class="mb-4 font-semibold text-slate-800" style="font-size: 16px">Otomatisasi & Fitur</h2>
+
+          <div class="flex items-center justify-between py-2">
+            <div>
+              <label for="switch-1" class="text-sm font-medium text-slate-700">Mode Fokus</label>
+              <p class="text-xs text-slate-500">Sembunyikan gangguan saat jam kerja.</p>
+            </div>
+            <label class="relative inline-flex h-[24px] w-[44px] cursor-pointer items-center flex-shrink-0">
+              <input id="switch-1" type="checkbox" class="peer sr-only" />
+              <span class="absolute inset-0 rounded-full border border-[#CBD5E1] bg-[#E2E8F0] transition-all duration-[300ms] peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#3B82F6] peer-checked:bg-[#2563EB] peer-checked:border-[#2563EB]"></span>
+              <span class="pointer-events-none absolute top-0.5 left-0.5 h-[20px] w-[20px] rounded-full bg-[#FFFFFF] shadow transition-all duration-[300ms] peer-checked:translate-x-[22px]"></span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Log -->
+        <div class="space-y-3">
+          <h2 class="text-sm font-semibold text-slate-800">Log Login Terakhir</h2>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <table class="min-w-full text-sm">
+              <thead class="bg-slate-50">
+                <tr>
+                  <th class="px-4 py-3 text-left font-medium text-slate-600">Waktu</th>
+                  <th class="px-4 py-3 text-left font-medium text-slate-600">Aktivitas</th>
+                  <th class="px-4 py-3 text-left font-medium text-slate-600">Status</th>
+                  <th class="px-4 py-3 text-left font-medium text-slate-600">Detail</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50">
+                  <td class="px-4 py-3 text-slate-700">05 Des, 14:20</td>
+                  <td class="px-4 py-3 text-slate-700">Pembaruan Profil</td>
+                  <td class="px-4 py-3 text-slate-700">Berhasil</td>
+                  <td class="px-4 py-3 text-slate-700">Rincian</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="px-4 py-3 text-slate-700">08 Des, 09:15</td>
+                  <td class="px-4 py-3 text-slate-700">Login Perangkat Baru</td>
+                  <td class="px-4 py-3 text-slate-700">Informasi</td>
+                  <td class="px-4 py-3 text-slate-700">Rincian</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="px-4 py-3 text-slate-700">01 Des, 18:45</td>
+                  <td class="px-4 py-3 text-slate-700">Gagal Login</td>
+                  <td class="px-4 py-3 text-slate-700">Gagal</td>
+                  <td class="px-4 py-3 text-slate-700">Rincian</td>
+                </tr>
+                 <tr class="hover:bg-slate-50">
+                  <td class="px-4 py-3 text-slate-700">18 Des, 21:45</td>
+                  <td class="px-4 py-3 text-slate-700">Login Perangkat Baru</td>
+                  <td class="px-4 py-3 text-slate-700">Berhasil</td>
+                  <td class="px-4 py-3 text-slate-700">Rincian</td>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

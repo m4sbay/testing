@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pendaftaran Sidang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <!-- Struktur UI - Header -->
+  <body class="min-h-screen bg-slate-100 flex items-center justify-center p-6">
+    <div class="w-full max-w-3xl bg-white shadow-lg rounded-2xl border border-slate-200 overflow-hidden">
+      <div class="px-6 py-4 border-b border-slate-200">
+        <h1 class="text-xl font-semibold mb-3 text-slate-900">Pendaftaran Sidang</h1>
+        <p class="text-sm text-[#868E96]">Kelola informasi profil, preferensi notifikasi, dan keamanan akun Anda.</p>
+      </div>
+      <div class="px-6 py-6 space-y-8">
+        <!-- End Struktur UI - Header -->
+
+        <!-- Komponen Tabs -->
+        <div class="">
+          <button class=""><span>Profile</span></button>
+          <button class=""><span>Keamanan</span></button>
+          <button class=""><span>Log Aktivitas</span></button>
+        </div>
+        <!-- End Komponen Tabs -->
+
+        <!-- Komponen Text Field -->
+        <div class="">
+          <label class="">Nama </label>
+          <input type="text" placeholder="Masukan username anda" class="" />
+        </div>
+        <!-- End Komponen Text Field -->
+
+        <!-- Komponen Radio Button -->
+        <div class="">
+          <label class="">Kategori Sidang</label>
+          <label class="">
+            <input type="radio" name="role_clean" checked />
+            <div class=""></div>
+            <span>Seminar Proposal</span>
+          </label>
+          <label class="">
+            <input type="radio" name="role_clean" />
+            <div class=""></div>
+            <span>Seminar hasil</span>
+          </label>
+        </div>
+        <!-- End Komponen Radio Button -->
+
+        <!-- Komponen Checkbox -->
+        <div>
+          <div class="">
+            <div class="">
+              <label class="">
+                <input type="checkbox" checked />
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <div class=""><span>Notifikasi Email</span></div>
+            </div>
+            <div class=""><p>Kirim notifikasi sidang ke email</p></div>
+          </div>
+        </div>
+        <!-- End Komponen Checkbox -->
+
+        <!-- Komponen Button -->
+        <button class="">Daftar Sekarang</button>
+        <!-- End Komponen Button -->
+
+        <!-- Komponen Alert Banner -->
+        <div role="alert" class="">
+          <div class="">Pendaftaran Berhasil !</div>
+          <p class="">Selamat Pendaftaran Sidang Seminar Hasil Anda Berhasil</p>
+        </div>
+        <!-- End Komponen Alert Banner -->
+
+        <!-- Komponen Progress Bar -->
+        <div class="">
+          <div class=""><div class=""></div></div>
+          <span class="">80%</span>
+        </div>
+        <!-- End Komponen Progress Bar -->
+
+        <!-- Struktur Komponen Switch -->
+        <div class="flex flex-col gap-[6px]">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col gap-[4px]">
+              <span class="text-[14px] font-medium text-[#1E1E1E]">Ingatkan sebelum sidang</span>
+              <p class="text-[12px] text-[#868E96]">Kirim pengingat ke email 1 hari sebelum jadwal sidang</p>
+            </div>
+            <!-- End Struktur Komponen Switch -->
+
+            <!-- Komponen Switch -->
+            <label for="toggle-switch" class="">
+              <input type="checkbox" id="toggle-switch" class="" />
+              <div class=""></div>
+              <div class=""></div>
+            </label>
+            <!-- End Komponen Switch -->
+          </div>
+        </div>
+
+        <!-- Struktur Komponen Data Table -->
+        <div class="flex flex-col gap-[6px]">
+          <span class="text-[14px] font-medium text-[#1E1E1E]">Jadwal Sidang</span>
+          <p class="text-[12px] text-[#868E96]">Riwayat jadwal sidang yang telah didaftarkan.</p>
+          <div class="overflow-x-auto rounded-[8px] border border-[#E5E7EB]">
+            <!-- End Struktur Komponen Data Table -->
+
+            <!-- Komponen Data Table -->
+            <table class="">
+              <thead>
+                <tr class="">
+                  <th class="">Tanggal</th>
+                  <th class="">Kategori</th>
+                  <th class="">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="">
+                  <td class="">28 Jan 2026</td>
+                  <td class="">Seminar Proposal</td>
+                  <td class="">Terdaftar</td>
+                </tr>
+                <tr class="">
+                  <td class="">15 Feb 2026</td>
+                  <td class="">Seminar Hasil</td>
+                  <td class="">Menunggu</td>
+                </tr>
+                <tr class="">
+                  <td class="">10 Mar 2026</td>
+                  <td class="">Seminar Proposal</td>
+                  <td class="">Terdaftar</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- End Komponen Data Table -->
+          </div>
+        </div>
+      </div>
+      <!-- End Struktur Komponen Data Table -->
+    </div>
+  </body>
+</html>
